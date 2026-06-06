@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: python:3.11-slim
-        command: ["sh", "-c"]
-        args:
-          - |
-            echo "Hello DevOps 🚀 I am running inside Kubernetes!";
+        image:  abhaysingh07/devops-app # TEMP (next we fix properly)
+        ports:
+        - containerPort: 5000
+
