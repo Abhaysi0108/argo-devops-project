@@ -15,10 +15,7 @@ spec:
       containers:
       - name: app
         image: python:3.11-slim
-        command: ["python", "/app/app.py"]
-        volumeMounts:
-        - name: app-volume
-          mountPath: /app
-      volumes:
-      - name: app-volume
-        emptyDir: {}
+        command: ["sh", "-c"]
+        args:
+          - |
+            echo "Hello DevOps 🚀 I am running inside Kubernetes!";
